@@ -1,0 +1,10 @@
+// import your component here
+
+export default {
+    title: 'Plop Component',
+};
+
+export const Default = () => (
+    <div>Did you forget to import your component into the story</div>
+);
+

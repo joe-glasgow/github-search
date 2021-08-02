@@ -27,6 +27,11 @@ module.exports = (plop) => {
                         './src/shared/components/{{properCase componentName}}/{{properCase componentName}}.test.tsx',
                     templateFile: './config/plop/component/component.test.tsx.plop',
                 },
+                {
+                    type: 'pretty-add',
+                    path: './stories/{{properCase componentName}}.stories.tsx',
+                    templateFile: './config/plop/component/component.stories.tsx.plop',
+                },
             ];
 
             return actions;

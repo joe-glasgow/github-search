@@ -15,6 +15,7 @@ const paths: any = {
     srcClient: resolveApp('src/client'),
     srcServer: resolveApp('src/server'),
     srcShared: resolveApp('src/shared'),
+    providers: resolveApp('src/shared/providers'),
     types: resolveApp('node_modules/@types'),
     locales: resolveApp('src/shared/i18n/locales'),
     publicPath: '/static/',
@@ -25,6 +26,7 @@ paths.resolveModules = [
     paths.srcServer,
     paths.srcShared,
     paths.src,
+    paths.providers,
     'node_modules',
 ];
 

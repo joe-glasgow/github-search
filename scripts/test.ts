@@ -16,7 +16,6 @@ process.on('unhandledRejection', (err) => {
 require('../config/env');
 
 const argv = process.argv.slice(2);
-
 // Watch unless on CI or in coverage mode
 if (!process.env.CI && argv.includes('--coverage') === false) {
     argv.push('--watch');

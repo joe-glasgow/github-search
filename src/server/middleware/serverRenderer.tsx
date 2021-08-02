@@ -4,11 +4,10 @@ import * as express from 'express';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter as Router } from 'react-router-dom';
 import { Store } from 'redux';
-import { Provider } from 'react-redux';
 import { HelmetProvider } from 'react-helmet-async';
 import { ServerStyleSheet } from 'styled-components';
 import { ChunkExtractor } from '@loadable/server';
-import IntlProvider from '../../shared/i18n/IntlProvider';
+import { RepoProvider } from 'providers/RepoProvider';
 import App from '../../shared/App';
 import Html from '../components/HTML';
 import paths from '../../../config/paths';
@@ -25,15 +24,13 @@ const serverRenderer: any = () => (
 ) => {
     const sheet = new ServerStyleSheet(); // <-- creating out stylesheet
     const SSRApp = () => (
-        <Provider store={res.locals.store}>
+        <RepoProvider>
             <Router location={req.url} context={routerContext}>
-                <IntlProvider>
-                    <HelmetProvider context={helmetContext}>
-                        <App />
-                    </HelmetProvider>
-                </IntlProvider>
+                <HelmetProvider context={helmetContext}>
+                    <App />
+                </HelmetProvider>
             </Router>
-        </Provider>
+        </RepoProvider>
     );
     const jsx = extractor.collectChunks(<SSRApp />);
     const content = renderToString(sheet.collectStyles(jsx));

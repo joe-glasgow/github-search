@@ -1,0 +1,17 @@
+$flexGridSize: 1;
+$flexGridWidth: 32%;
+
+:global(.flex-grid) {
+    display: flex;
+}
+:global(.col) {
+    flex: $flexGridSize;
+}
+
+:global(.flex-grid-thirds) {
+    display: flex;
+    justify-content: space-between;
+}
+:global(.flex-grid-thirds .col) {
+    width: $flexGridWidth;
+}

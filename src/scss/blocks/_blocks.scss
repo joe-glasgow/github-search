@@ -1,0 +1,22 @@
+@import '../abstracts/gutters';
+
+@mixin formelements {
+    border-radius: $gutterXL;
+    outline: none;
+    padding: $gutterSm;
+    margin-right: $gutterSm;
+}
+
+:global(.container) {
+    margin: $gutterSm 0;
+}
+
+:global(input[type='text']) {
+    @include formelements();
+}
+
+:global(button[type='submit']) {
+    @include formelements();
+    background: none;
+    cursor: pointer;
+}
