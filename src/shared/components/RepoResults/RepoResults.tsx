@@ -5,7 +5,7 @@ const RepoResults = () => {
     const { state } = useContext(RepoContext);
     const [languages, setLanguages] = useState<string[]>([]);
     const [mounted, setMounted] = useState<boolean>(false);
-
+    // TODO: Enhancement, factor out to a util for unit test
     const mode: (arr: string[]) => string | undefined = (arr: string[]) =>
         arr
             .sort(

@@ -3,6 +3,7 @@ import i18next from 'i18next';
 import i18nextXHRBackend from 'i18next-xhr-backend';
 import { I18nextProvider } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { getLocale } from '../store/app/selectors';
 
 import deDE from './locales/de_DE/translation.json';
 import enUS from './locales/en_US/translation.json';

@@ -6,10 +6,10 @@ import favicon from '../shared/assets/favicon.png';
 import routes from './routes';
 import css from './App.module.scss';
 
-const App: FC<any> = () => {
+const App: FC = () => {
     useEffect(() => {
-        const jssStyles: any = document.querySelector('#jss-server-side');
-        if (jssStyles) {
+        const jssStyles: HTMLScriptElement | null = document.querySelector('#jss-server-side');
+        if (jssStyles && jssStyles.parentElement) {
             jssStyles.parentElement.removeChild(jssStyles);
         }
     }, []);
