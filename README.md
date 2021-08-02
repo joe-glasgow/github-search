@@ -3,9 +3,9 @@
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/joe-glasgow/base-web-app/issues) [![Known Vulnerabilities](https://snyk.io/test/github/joe-glasgow/base-web-app/badge.svg)](https://snyk.io/test/github/joe-glasgow/base-web-app) [![CircleCI](https://circleci.com/gh/joe-glasgow/base-web-app/tree/main.svg?style=svg)](https://circleci.com/gh/joe-glasgow/base-web-app/tree/main)
 
-# Fullstack Base Web App [<img src="https://img.icons8.com/ios/452/foundation.png" width="55"/>](icon)
+# Github Search App
 
-I've created this web app to enable rapid development of React projects that have performance and coding standards baked in.
+I've created this from my base web app to enable rapid development of React projects that have performance and coding standards baked in.
 This repo builds on the work of others and my additions lay on extra layers of enhancement (such as Docker, gzip, [loadable components](https://github.com/gregberge/loadable-components)).
 
 There is no included UI library, to keep the weight of the application as small as possible.
